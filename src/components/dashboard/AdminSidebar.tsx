@@ -27,7 +27,8 @@ import { Button } from '@/components/ui/button';
 
 const AdminSidebar = () => {
   const navigate = useNavigate();
-  const { collapsed, toggleSidebar } = useSidebar();
+  const { state, toggleSidebar } = useSidebar();
+  const collapsed = state === 'collapsed';
 
   const menuItems = [
     { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
